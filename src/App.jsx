@@ -8,6 +8,9 @@ import {
 
 import Login from "./page/Login";
 import Register from "./page/Register";
+import DashboardScreen from "./page/Dashboard";
+import BuyerManagement from "./page/Buyer/BuyerManagement";
+import BuyerOrderScreen from "./page/Buyer/BuyerOrderScreen";
 
 function App() {
   return (
@@ -20,7 +23,13 @@ function App() {
         <Route path="/login" element={<Login />} />
         <Route path="/register" element={<Register />} />
 
-        <Route path="/dashboard" element={<h1>Dashboard</h1>} />
+        <Route path="/dashboard" element={<DashboardScreen />} />
+
+        <Route
+          path="/dashboard/BuyerManagement"
+          element={<BuyerManagement />}
+        />
+        <Route path="/dashboard/BuyerOrder" element={<BuyerOrderScreen />} />
 
         {/* 404 fallback */}
         <Route path="*" element={<h1>404 - Page Not Found</h1>} />

@@ -1,6 +1,6 @@
 import { initializeApp } from "firebase/app";
 import { getFirestore } from "firebase/firestore";
-import { getAuth } from "firebase/auth"; // ← different import
+import { getAuth } from "firebase/auth";
 
 //development database
 const firebaseConfig = {
@@ -24,7 +24,7 @@ const firebaseConfig = {
 // };
 
 const firebaseApp = initializeApp(firebaseConfig);
-const auth = getAuth(firebaseApp); // ← no AsyncStorage needed
+const auth = getAuth(firebaseApp);
 const db = getFirestore(firebaseApp);
 
 export { firebaseApp, db, auth };
